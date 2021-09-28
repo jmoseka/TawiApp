@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/nav_home"
+        android:title="@string/home"
+
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_home"
+        />
+
+    <item android:id="@+id/nav_community"
+        app:iconTint="@color/white"
+        android:title="@string/category"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_category"
+
+        />
+
+    <item
+        app:showAsAction="ifRoom"
+        android:id="@+id/nav_sell"
+     android:title=""
+        android:icon="@drawable/ic_add"
+
+        />
+
+    <item android:id="@+id/nav_messages"
+        app:showAsAction="ifRoom"
+        android:title="Messages"
+
+        android:icon="@drawable/ic_message"
+
+        />
+    <item android:id="@+id/nav_profile"
+        app:showAsAction="ifRoom"
+        android:title="Profile"
+        android:icon="@drawable/ic_user"
+
+        />
+
+</menu>

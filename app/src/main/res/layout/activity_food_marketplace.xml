@@ -1,0 +1,289 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FoodMarketplace">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/foodAppbar"
+        android:paddingBottom="3dp"
+        android:background="@color/green"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/searchbar_bg_border"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize">
+
+                <include
+                    layout="@layout/toolbar_layout"/>
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+            <TextView
+                android:id="@+id/foodBrowseLocation"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="5dp"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/countrywide"
+                android:padding="5dp"
+                android:drawablePadding="5dp"
+                app:drawableTint="@color/white"
+                app:drawableStartCompat="@drawable/ic_location_pin"
+                app:drawableLeftCompat="@drawable/ic_location_pin" />
+
+        </RelativeLayout>
+
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+       android:visibility="gone"
+        android:background="@color/light_green"
+        android:id="@+id/foodConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/viewpage_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/constraintHeader"
+
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/mainCancelBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+
+                android:src="@drawable/ic_cancel_3"
+                android:text="@string/skip"
+                android:textColor="@color/orange"
+                android:textSize="16sp"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.971"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/orange" />
+
+            <ImageView
+                android:id="@+id/circleImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tint="@color/orange"
+
+                android:src="@drawable/ic_africa"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.499"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.19"
+                android:contentDescription="@string/africa_logo" />
+
+            <LinearLayout
+                android:id="@+id/titleDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                app:layout_constraintVertical_bias="0"
+                android:paddingBottom="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/circleImageView"
+                android:paddingEnd="20dp"
+                android:paddingTop="0dp"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/buy_and_sell_your"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+
+                    tools:layout_editor_absoluteX="10dp"
+                    tools:layout_editor_absoluteY="142dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/top_bg"
+
+                app:layout_constraintVertical_bias="0"
+                app:layout_constraintTop_toBottomOf="@id/titleDesc"
+                app:tabIndicatorColor="@color/white"
+                app:tabRippleColor="@color/green"
+                android:layout_marginEnd="18dp"
+                android:layout_marginStart="18dp"
+                >
+                <com.google.android.material.tabs.TabLayout
+
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/top_bg"
+
+                    app:tabIndicatorColor="@color/white"
+                    app:tabRippleColor="@color/green"
+                    app:tabTextColor="@color/green"
+
+
+                    />
+
+            </LinearLayout>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.viewpager.widget.ViewPager
+
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintHeader"
+
+            app:layout_constraintVertical_bias="0"
+            android:layout_marginEnd="18dp"
+            android:layout_marginStart="18dp"
+
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.core.widget.NestedScrollView
+
+        android:layout_above="@id/foodBottomNavView"
+        android:layout_below="@+id/foodAppbar"
+        android:id="@+id/foodNes"
+        android:fillViewport="true"
+        android:background="@color/light"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.smarteist.autoimageslider.SliderView
+                android:layout_marginTop="5dp"
+                android:id="@+id/food_advert_slider"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/light"
+                app:sliderAnimationDuration="1000"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="true"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="2dp"
+                app:sliderIndicatorSelectedColor="@color/orange"
+                app:sliderIndicatorUnselectedColor="@color/white"
+                app:sliderScrollTimeInSec="8"
+                app:sliderStartAutoCycle="true" />
+
+            <TextView
+                android:background="@color/white"
+                android:textStyle="bold"
+
+                android:text="@string/popular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/foodRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
+                />
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:visibility="gone"
+        android:id="@+id/foodBottomNavView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:itemHorizontalTranslationEnabled="false"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"
+        android:layout_alignParentBottom="true"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_nav">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
+
+
+
+
+
+</RelativeLayout>

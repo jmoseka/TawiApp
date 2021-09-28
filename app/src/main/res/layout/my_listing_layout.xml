@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:foreground="?selectableItemBackground"
+    android:id="@+id/listingCardView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="120dp"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+
+        >
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/listingProductImage"
+            android:layout_width="150dp"
+            android:layout_height="130dp"
+            />
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/listingProductTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:drawablePadding="4dp"
+                    android:textSize="10sp"
+                    android:id="@+id/listingProductLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    app:drawableStartCompat="@drawable/ic_location_pin" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/productAdditionalAddress"
+                    android:layout_marginStart="3dp"
+                    android:textSize="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+
+
+
+
+            <TextView
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
+                android:id="@+id/listingProductCurrency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:textSize="10sp"
+                android:id="@+id/listingProductTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+
+                android:gravity="bottom"
+
+                />
+
+            <ImageView
+                android:id="@+id/productDelete"
+                android:layout_gravity="end|bottom"
+                android:src="@drawable/ic_bin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/todo" />
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

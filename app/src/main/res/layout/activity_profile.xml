@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light"
+    android:fillViewport="true"
+    tools:context=".ProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:background="@color/green"
+        app:title="Profile"
+        app:menu="@menu/menu_profile"
+        app:titleTextColor="@color/white"
+        android:id="@+id/profileT"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:paddingBottom="75dp"
+        android:layout_below="@+id/profileT"
+        android:id="@+id/nesView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                app:cardCornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.01"
+                app:layout_constraintWidth_percent="0.97">
+
+                <LinearLayout
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="100"
+                    android:baselineAligned="false">
+
+                    <RelativeLayout
+                        android:orientation="vertical"
+                        android:layout_weight="20"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_user"
+                        app:civ_circle_background_color="@color/grey"
+                        app:civ_border_color="@color/white"
+                        app:civ_border_width="1dp"
+                        android:id="@+id/profileImg"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp" />
+
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_marginStart="10dp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="80"
+
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:id="@+id/profileUsername"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp" />
+
+
+
+                            <TextView
+                                android:drawablePadding="5dp"
+                                android:id="@+id/profileLocation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                app:drawableStartCompat="@drawable/ic_home" />
+
+
+
+
+                        <TextView
+                            android:id="@+id/etEditProfile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="30dp"
+                            android:drawablePadding="5dp"
+                            app:drawableTint="@color/green"
+                            android:text="@string/edit_profile"
+                            app:drawableStartCompat="@drawable/ic_pen"
+                            app:tint="@color/green" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:background="@color/white"
+                android:textStyle="bold"
+                android:id="@+id/myLis"
+                android:layout_marginTop="4dp"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/my_listings"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.047"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardViewDetail"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginBottom="10dp"
+                android:id="@+id/rvMyListing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myLis"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/profileBottomNavView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:itemHorizontalTranslationEnabled="false"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"
+        android:layout_alignParentBottom="true"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_nav">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/myMessageUsers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:background="@color/light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:src="@drawable/ic_user"
+                android:id="@+id/chatProfile"
+                android:layout_weight="30"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                app:civ_circle_background_color="@color/grey"
+                app:civ_border_color="@color/grey"
+                app:civ_border_width="1dp"
+                />
+
+            <RelativeLayout
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="70"
+              >
+                <TextView
+                    android:paddingTop="12dp"
+                    android:layout_marginStart="2dp"
+                    android:textSize="15sp"
+                    android:id="@+id/messageUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:padding="5dp"
+                    android:id="@+id/lastMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/messageUser"
+                    android:layout_marginTop="3dp"
+                    android:maxHeight="40dp"
+                    android:maxLines="2"
+                   />
+
+                <TextView
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/messageTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lastMessage"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp" />
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

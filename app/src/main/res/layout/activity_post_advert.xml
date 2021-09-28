@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostAdvertActivity"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+
+        android:layout_above="@+id/linPost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/sellAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:textColor="@color/white"
+            android:background="@color/green"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="10dp"
+            android:id="@+id/tvSellItem"
+            android:textSize="20sp"
+            android:text="@string/sell_your_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/ns"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/sellAppBar"
+        android:scrollbars="vertical"
+        android:background="@color/light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/linearLayoutSell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSellCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:layout_marginTop="5dp">
+
+
+                <LinearLayout
+
+                    android:id="@+id/l"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40"
+                        android:padding="10dp"
+                        android:text="@string/choose_category"
+                        />
+
+                    <TextView
+                        android:gravity="center_horizontal"
+
+                        android:id="@+id/advertCategory"
+                        android:textColor="@color/black"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="50"
+                        android:padding="10dp"
+                        />
+                    <ImageView
+                        android:id="@+id/chooseCat"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_right_arrow"
+                        android:layout_weight="10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        />
+
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_below="@+id/cvSellCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:id="@+id/cvSellUpload"
+                >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tvUploadProduct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:paddingStart="7dp"
+                        android:paddingEnd="7dp"
+                        android:text="@string/upload_images"
+                        android:textColor="@color/green"
+                        android:textSize="16sp"
+                        app:drawableTint="@color/orange"
+                        android:drawablePadding="5dp"
+                        app:drawableEndCompat="@drawable/ic_plus" />
+
+
+
+                </LinearLayout>
+
+
+
+
+
+                <LinearLayout
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="7dp"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+
+                        android:orientation="horizontal"
+                        android:id="@+id/rvAdvertImage"
+                        android:minHeight="100dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/cvSellTitle"
+                android:layout_below="@+id/cvSellUpload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp">
+
+                        <EditText
+                            android:id="@+id/sellProductTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:background="@drawable/transparent_bg"
+                            android:layout_weight="70"
+                            android:hint="@string/title"
+                            />
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_below="@+id/cvSellTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:id="@+id/cvSellDesc"
+                >
+
+                    <EditText
+                        android:id="@+id/sellProductDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:gravity="top"
+                        android:hint="@string/describe_your_item"
+                        android:inputType="textMultiLine"
+
+                        android:background="@drawable/transparent_bg"
+                        android:autofillHints="" />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSellLocation"
+                android:layout_below="@+id/cvSellDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/sellLocation"
+                            android:background="@drawable/transparent_bg"
+                            android:layout_weight="90"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:hint="@string/location"
+                            />
+
+
+                    <ImageView
+                        android:id="@+id/chooseLocation"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_right_arrow"
+                        android:layout_weight="10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        />
+
+
+                </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/linearInfo"
+                        android:layout_marginTop="3dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+
+                            android:background="@drawable/transparent_bg"
+                            android:padding="10dp"
+                            android:id="@+id/subRegion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <EditText
+                           android:layout_marginStart="4dp"
+                            android:id="@+id/additionalInfo"
+
+                            android:background="@drawable/transparent_bg"
+                            android:textStyle="italic"
+                            android:inputType="text"
+                            android:padding="10dp"
+                            android:hint="@string/additional_information"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:autofillHints="" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvSellPrice"
+                android:layout_below="@+id/cvSellLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp">
+
+                <LinearLayout
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                        <EditText
+                            android:hint="@string/price"
+                            android:id="@+id/etSellPrice"
+                            android:layout_weight="70"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:background="@drawable/transparent_bg"
+                            android:padding="10dp"
+                            android:autofillHints="" />
+
+                  <Spinner
+                        android:id="@+id/spinnerPrice"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:layout_weight="30"
+                        android:gravity="end" />
+
+                </LinearLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/postSpin_kit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:SpinKit_Color="@color/green"/>
+
+
+    </RelativeLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/linPost"
+        android:background="@color/green"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:background="@drawable/green_bg"
+            android:id="@+id/btnSell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/green"
+            android:padding="10dp"
+            android:text="@string/post"
+
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

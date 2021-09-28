@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_gravity="bottom"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical"
+    android:id="@+id/no_internet_layout"
+    android:background="@color/black"
+    >
+    <TextView
+
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+     android:text="@string/no_internet_connection_found_please_connect_then_try_again"
+      />
+    <TextView
+        android:gravity="center"
+        android:id="@+id/try_again"
+        android:textStyle="bold"
+        android:textColor="@color/orange"
+        android:text="@string/retry"
+        android:padding="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mila.agrimo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo_animate"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_africa"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Agrimo">
+        <activity android:name="com.mila.agrimo.MainActivity"/>
+        <activity android:name="com.mila.agrimo.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.mila.agrimo.BrowseCategory"/>
+        <activity android:name="com.mila.agrimo.PostAdvertActivity"/>
+        <activity android:name="com.mila.agrimo.ChooseCategory"/>
+        <activity android:name="com.mila.agrimo.ChooseLocation"/>
+        <activity android:name="com.mila.agrimo.BrowseLocation"/>
+        <activity android:name="com.mila.agrimo.ProfileActivity"/>
+        <activity android:name="com.mila.agrimo.EditProfileActivity"/>
+        <activity android:name="com.mila.agrimo.ProductInfoActivity"/>
+        <activity android:name="com.mila.agrimo.ChatActivity"/>
+        <activity android:name="com.mila.agrimo.MessageActivity"/>
+        <activity android:name="com.mila.agrimo.OtherProfile"/>
+        <activity android:name="com.mila.agrimo.SuccessActivity"/>
+        <activity android:name="com.mila.agrimo.FoodMarketplace"
+            android:windowSoftInputMode="stateHidden"
+            />
+
+        <activity android:name="com.mila.agrimo.FarmMarketplace"
+            android:windowSoftInputMode="stateHidden"/>
+
+
+    </application>
+
+</manifest>

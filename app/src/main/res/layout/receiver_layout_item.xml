@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="10dp"
+    >
+
+
+
+
+        <LinearLayout
+            android:minWidth="100dp"
+            android:background="@drawable/bg_receiver"
+            android:id="@+id/layout_gchat_container_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginStart="5dp"
+                android:id="@+id/receiverMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:maxWidth="260dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="8dp"
+                android:paddingRight="12dp"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_marginStart="5dp"
+                android:id="@+id/receiverTime"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+
+
+    <TextView
+        android:layout_alignBottom="@id/layout_gchat_container_other"
+        android:layout_toEndOf="@id/layout_gchat_container_other"
+        android:id="@+id/receiverSeen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#C0C0C0"
+        android:textSize="10sp"
+        />
+
+
+</RelativeLayout>

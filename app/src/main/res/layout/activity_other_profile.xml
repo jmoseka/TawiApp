@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".OtherProfile">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:paddingBottom="65dp"
+        android:id="@+id/nesView"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.03"
+                app:layout_constraintWidth_percent="0.96"
+
+                app:cardCornerRadius="10dp"
+               >
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="100"
+                        android:baselineAligned="false">
+
+                        <RelativeLayout
+                            android:orientation="vertical"
+                            android:layout_weight="20"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                app:civ_circle_background_color="@color/grey"
+                                app:civ_border_color="@color/white"
+
+                                app:civ_border_width="1dp"
+                                android:id="@+id/otherProfileImage"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+
+                                android:src="@drawable/ic_user" />
+
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_marginStart="7dp"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="80"
+
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:text="LULU"
+
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:id="@+id/otherProfileUsername"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="4dp" />
+
+                            <TextView
+                                android:drawablePadding="5dp"
+
+                                android:text="Location"
+                                android:id="@+id/otherProfileLocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:padding="5dp"
+                                app:drawableStartCompat="@drawable/ic_home" />
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:weightSum="100"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:id="@+id/otherPhoneNumber"
+                            android:drawablePadding="7dp"
+                            android:padding="8dp"
+                            app:drawableTint="@color/green"
+                            app:tint="@color/green"
+                            android:layout_weight="50"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:drawableStartCompat="@drawable/ic_phone_call" />
+
+
+                        <TextView
+                            android:id="@+id/otherChat"
+                            android:drawablePadding="7dp"
+                            android:text="Chat"
+                            android:padding="8dp"
+                            app:drawableTint="@color/green"
+                            app:tint="@color/green"
+                            android:layout_weight="50"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:drawableStartCompat="@drawable/ic_message" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <TextView
+                android:id="@id/lis"
+                android:layout_marginTop="4dp"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Listings"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.047"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardViewDetail"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginBottom="10dp"
+                android:id="@+id/rvOtherListing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lis"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/otherProfileBottomNavView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:itemHorizontalTranslationEnabled="false"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"
+        android:layout_alignParentBottom="true"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_nav">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
+
+
+</RelativeLayout>

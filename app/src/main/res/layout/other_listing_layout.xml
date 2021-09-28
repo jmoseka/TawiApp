@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:foreground="?selectableItemBackground"
+    android:id="@+id/otherListingCardView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="10dp"
+    android:background="@color/light"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        >
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/otherListingProductImage"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:contentDescription="@string/todo" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginStart="3dp"
+                android:id="@+id/otherListingProductTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                />
+
+
+
+            <TextView
+                app:drawableTint="@color/grey"
+                android:drawablePadding="2dp"
+                android:textSize="10sp"
+                android:id="@+id/otherListingProductLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                app:drawableStartCompat="@drawable/ic_location_pin" />
+
+
+            <TextView
+                android:id="@+id/otherListingProductCurrency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginStart="3dp"
+                />
+            <TextView
+                android:textSize="10sp"
+                android:id="@+id/otherListingProductTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:layout_gravity="end"
+                android:gravity="bottom"
+                />
+
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

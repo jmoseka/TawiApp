@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_green"
+
+
+    tools:context=".LoginFragment"
+
+
+    >
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLoginView"
+        android:padding="14dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:boxStrokeColor="@color/orange"
+            app:boxStrokeWidthFocused="2dp"
+            app:endIconTint="@color/orange"
+            app:startIconTint="@color/orange"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/loginEtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textEmailAddress"
+                android:hint="@string/email"
+                android:padding="10dp"
+
+
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true"
+                app:boxStrokeColor="@color/black"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconTint="@color/orange"
+                app:startIconTint="@color/orange"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/loginEtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPassword"
+                    android:padding="10dp"
+                    android:hint="@string/password"
+
+
+
+                    />
+
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+        <Button
+            android:layout_marginTop="5dp"
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:background="@drawable/button_bg"
+            android:text="@string/login"
+            android:textStyle="bold"
+            app:backgroundTint="@color/green"
+
+
+            />
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

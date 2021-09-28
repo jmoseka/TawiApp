@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:foreground="?selectableItemBackground"
+    android:id="@+id/listingCardView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="10dp"
+    android:background="@color/light"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        >
+
+        <ImageView
+            android:src="@drawable/cow_img"
+            android:scaleType="centerCrop"
+            android:id="@+id/listingProductImage"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+
+                android:layout_marginStart="7dp"
+                android:id="@+id/listingProductTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Freshian"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                />
+
+
+
+            <TextView
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="5dp"
+                app:drawableTint="@color/grey"
+                android:drawablePadding="2dp"
+                android:textSize="10sp"
+                android:id="@+id/listingProductLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nyahururu"
+
+                app:drawableStartCompat="@drawable/ic_location_pin" />
+
+
+            <TextView
+                android:layout_marginTop="3dp"
+                android:id="@+id/listingProductCurrency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="600 ksh"
+                android:textColor="@color/green"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginStart="5dp"
+                />
+            <TextView
+                android:layout_marginTop="3dp"
+                android:textSize="10sp"
+                android:id="@+id/listingProductTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:layout_marginStart="5dp"
+                android:text="3 days ago"
+                />
+
+            <ImageView
+                android:id="@+id/productDelete"
+                android:layout_gravity="end|bottom"
+                android:src="@drawable/ic_bin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
